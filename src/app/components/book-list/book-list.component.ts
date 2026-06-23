@@ -5,6 +5,7 @@ import { Book } from '../../models/book.model';
 
 @Component({
   selector: 'app-book-list',
+  standalone: false,
   templateUrl: './book-list.component.html'
 })
 export class BookListComponent implements OnInit {
