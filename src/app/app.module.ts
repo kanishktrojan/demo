@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { BookListComponent } from './components/book-list/book-list.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    BookListComponent,
+    TruncatePipe
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
