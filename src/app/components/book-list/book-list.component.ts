@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book.model';
+import { TruncatePipe } from '../../pipes/truncate.pipe';
 
 @Component({
   selector: 'app-book-list',
-  standalone: false,
+  standalone: true,
+  imports: [CommonModule, FormsModule, TruncatePipe],
   templateUrl: './book-list.component.html'
 })
 export class BookListComponent implements OnInit {
